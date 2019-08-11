@@ -26,6 +26,14 @@ for i in range(13):
     tt[i] = 4
     sidaihuojian.append(tt)
 
+sandaihuojian = []
+for i in range(11):
+    ttt = t[:]
+    ttt[i] = 3
+    ttt[i+1] = 3
+    sandaihuojian.append(ttt)
+
+
 #  print(sidaihuojian)
 def get_moves(handcards, lastcards):
     if not lastcards:
@@ -48,7 +56,7 @@ def get_moves(handcards, lastcards):
         handnum = sum(rhandcards)
         rrmoves = []
         for m in rmoves:
-            if m in sidaihuojian:
+            if m in sidaihuojian or m in sandaihuojian:
                 continue
             rrmoves.append(m)
             values.append(cards_value[tuple(m)]- 0.1 * (handnum - sum(m)))
