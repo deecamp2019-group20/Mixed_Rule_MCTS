@@ -2,6 +2,7 @@ import game.r
 from mcts.evaluator import cards_value
 import numpy as np
 
+
         # test r
 # all_cards = [4]*13 + [1,1]
 # print(all_cards)
